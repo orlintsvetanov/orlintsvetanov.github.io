@@ -46,7 +46,7 @@ document.addEventListener('click', event => {
 document.addEventListener('focusin', event => {
   if (!event.target.closest('.nav-group')) setSubmenu(false);
 });
-window.matchMedia('(min-width:1201px)').addEventListener('change', () => closeMenu());
+window.matchMedia('(min-width:701px)').addEventListener('change', () => closeMenu());
 document.querySelectorAll('[data-open-fees]').forEach(link => link.addEventListener('click', () => {
   document.getElementById('fees').open = true;
 }));

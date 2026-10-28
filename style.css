@@ -497,6 +497,7 @@ h3{line-height:1.35}
 .submenu-toggle[aria-expanded=true] .nav-chevron{transform:rotate(225deg);margin-bottom:0}
 .menu-toggle,.submenu{border-radius:22px}
 .submenu{overflow:hidden}
+@media(min-width:701px){.submenu{max-height:calc(100dvh - var(--site-header-height,200px) - 16px);overflow-y:auto;overscroll-behavior:contain}}
 .submenu a{border-radius:12px}
 #site-nav>.button{border-radius:24px}
 summary:after{content:'';display:block;position:absolute;right:8px;top:50%;width:9px;height:9px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-70%) rotate(45deg);transition:transform .2s}
@@ -506,19 +507,22 @@ details[open]>summary:after{content:'';transform:translateY(-30%) rotate(225deg)
 .duration-programme p.duration-description{font-size:1.1rem;color:var(--ink);line-height:1.7;margin:0}
 .duration-programme p:last-child{margin-top:20px}
 @media(min-width:701px) and (max-width:1350px){
- .header-inner{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) auto;grid-template-areas:'name nav language';gap:14px}
+ .header-inner{grid-template-columns:minmax(0,1fr) max-content auto;grid-template-areas:'name nav language';gap:10px}
  .menu-toggle{display:none}
- #site-nav,#site-nav.is-open{display:flex;position:static;flex-direction:row;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:4px 16px;padding:16px 0 0;max-height:none;overflow:visible;background:transparent;border:0}
- #site-nav>a:not(.button),.submenu-toggle{font-size:.8125rem;padding:8px 0;border:0}
- #site-nav>.button{font-size:.8125rem;min-height:38px;padding:8px 13px}
- .nav-group{width:auto;position:relative}
- .submenu-toggle{width:auto;justify-content:flex-start}
+ #site-nav,#site-nav.is-open{display:grid;grid-template-columns:repeat(2,max-content);position:static;justify-content:end;align-items:center;gap:6px 12px;padding:16px 0 0;max-height:none;overflow:visible;background:transparent;border:0}
+ #site-nav>a:not(.button),.submenu-toggle{display:flex;align-items:center;justify-content:center;min-height:40px;font-size:.8125rem;line-height:1.5;padding:8px 0;border:0;text-align:center}
+ #site-nav>.button{display:inline-flex;align-items:center;justify-content:center;justify-self:center;width:max-content;margin:0;font-size:.8125rem;line-height:1.5;min-height:40px;padding:8px 13px}
+ .nav-group{display:flex;align-items:center;width:auto;position:relative}
+ .submenu-toggle{width:100%;gap:7px}
+ #site-nav .nav-chevron{margin-left:0;flex-shrink:0}
  .submenu{position:absolute;top:calc(100% + 8px);right:0;left:auto;width:min(340px,calc(100vw - 48px));margin:0;padding:8px;background:#19161a;border:1px solid #ffffff30;box-shadow:0 16px 45px #0005}
  .submenu a{padding:12px 14px;font-size:.875rem;text-align:left}
  .site-header.is-scrolled #site-nav{padding-top:0}
  .site-header.is-scrolled .header-inner{align-items:center}
  html{scroll-padding-top:calc(var(--site-header-height,118px) + 16px)}
 }
+@media(min-width:801px) and (max-width:1100px){#site-nav,#site-nav.is-open{grid-template-columns:repeat(3,max-content)}}
+@media(min-width:1101px) and (max-width:1350px){#site-nav,#site-nav.is-open{grid-template-columns:repeat(6,max-content)}}
 
 /* Artist first: name and profession form the opening identity. */
 .opening-name .opening-role{display:block;margin-top:18px;color:#f3cc82;font:500 clamp(1.05rem,1.6vw,1.5rem)/1.4 var(--label);letter-spacing:.2em;text-transform:uppercase}
