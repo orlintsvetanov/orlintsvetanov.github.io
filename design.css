@@ -1,0 +1,191 @@
+/* Three review directions. The approved opening photograph is untouched. */
+.design-toolbar{position:sticky;top:var(--site-header-height,90px);z-index:55;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:14px 4vw;background:#fffcf5ed;color:#29252a;border-bottom:1px solid #d9d0c4;backdrop-filter:blur(18px);font:500 .8rem/1.5 var(--body)}
+.design-toolbar nav{display:flex;flex-wrap:wrap;gap:5px}
+.design-toolbar a{padding:8px 13px;border-radius:22px}
+.design-toolbar a[aria-current=page]{background:#30282e;color:#fff}
+.design-toolbar>a{border:1px solid #d9d0c4}
+.has-design-toolbar .section:not(#home){scroll-margin-top:100px}
+.site-experience .section:not(#home) img,.site-experience .section video{transition:transform .65s cubic-bezier(.2,.7,.3,1)}
+.photo-open{display:block;width:100%;padding:0;border:0;background:transparent;overflow:hidden;border-radius:inherit;color:inherit}
+.photo-open:hover img{transform:scale(1.025)}
+.photo-open:focus-visible{outline-offset:6px}
+.preview-filters,.programme-options{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0}
+.preview-filters button,.programme-options button{border:1px solid currentColor;border-radius:24px;background:transparent;color:inherit;padding:10px 18px;font:500 .8125rem/1.5 var(--body);transition:background .2s,transform .2s}
+.preview-filters button[aria-pressed=true],.programme-options button[aria-pressed=true]{background:var(--preview-accent,#6a455d);border-color:var(--preview-accent,#6a455d);color:var(--preview-on-accent,#fff)}
+.preview-filters button:hover,.programme-options button:hover{transform:translateY(-2px)}
+.duration-programme .programme-status{font-size:.9rem;min-height:3.5em;margin:8px 0 0!important;color:inherit}
+.photo-dialog{max-width:96vw;width:max-content;border:1px solid #ffffff30;border-radius:24px;padding:18px;background:#141218;color:#fff;box-shadow:0 30px 90px #0009}
+.photo-dialog::backdrop{background:#08070be8;backdrop-filter:blur(10px)}
+.photo-dialog img{max-width:88vw;max-height:76vh;width:auto;object-fit:contain;border-radius:14px}
+.photo-dialog p{max-width:75vw;margin:12px 0 0;color:#ddd2da;font-size:.8rem}
+.photo-dialog .close-photo{position:absolute;right:24px;top:24px;border:1px solid #ffffff70;border-radius:50%;width:42px;height:42px;background:#08070bdd;color:#fff;font-size:1.5rem;line-height:1}
+.site-experience .reveal-ready{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.site-experience .reveal-ready.is-visible{opacity:1;transform:none}
+.site-experience .occasion,.site-experience .lesson-package,.site-experience .video-links>a{transition:transform .25s,box-shadow .25s,background .25s}
+.site-experience .occasion:hover,.site-experience .lesson-package:hover,.site-experience .video-links>a:hover{transform:translateY(-5px)}
+
+/* 1. Warm, rounded editorial panels. */
+body[data-design=soft]{background:#eee9e1}
+[data-design=soft] .section:not(#home){--ink:#322831;--muted:#70636b;--paper:#faf5ee;--line:#dfd4cb;--preview-accent:#735166;--preview-on-accent:#fff;background:#faf7f2;color:var(--ink);margin:24px clamp(14px,3vw,54px);padding:clamp(40px,6vw,90px);border-radius:36px}
+[data-design=soft] .section:not(#home) p{color:var(--muted)}
+[data-design=soft] .section:not(#home) h2,[data-design=soft] .section:not(#home) h3,[data-design=soft] .section:not(#home) h4{color:var(--ink)}
+[data-design=soft] .section:not(#home) em,[data-design=soft] .section:not(#home) .eyebrow{color:#735166}
+[data-design=soft] .section figure img,[data-design=soft] .section .photo-open{border-radius:28px}
+[data-design=soft] .section figcaption{color:#70636b}
+[data-design=soft] .section:not(#home) .button{border-radius:28px;background:#735166;border-color:#735166;color:#fff}
+[data-design=soft] .section:not(#home) .text-link{border-color:#735166;color:#604254}
+[data-design=soft] .credentials{gap:10px;border:0;padding:0;margin-block:32px}
+[data-design=soft] .credentials>div{background:#eee5dd;border-radius:20px;padding:20px}
+[data-design=soft] .credential-number{color:#735166}
+[data-design=soft] .bio-details,[data-design=soft] details{border-color:#dfd4cb}
+[data-design=soft] .occasion-grid{gap:14px}
+[data-design=soft] .occasion,[data-design=soft] .occasion:nth-child(n){border:0;border-radius:24px;padding:25px;background:#eee5dd}
+[data-design=soft] .occasion:hover{background:#e8d9d9;box-shadow:0 16px 35px #4a263b12}
+[data-design=soft] .duration-programme{background:#eee5dd;border:0;border-radius:28px;padding:30px}
+[data-design=soft] .video-links>a{border:0;background:#eee5dd;border-radius:24px;padding:28px;color:#322831}
+[data-design=soft] .video-links small{color:#70636b}
+[data-design=soft] .play{color:#735166}
+[data-design=soft] .music-project{border:0;background:#eee5dd;border-radius:28px;padding:32px;margin-top:20px}
+[data-design=soft] .tango-project .video-feature,[data-design=soft] .tango-project .tango-link{background:#faf7f2;border:0;border-radius:24px;padding:24px}
+[data-design=soft] .tango-project .tango-details,[data-design=soft] .tango-project .tango-roster li{border-color:#d7c9cc}
+[data-design=soft] .tango-project .tango-roster span,[data-design=soft] .tango-project .fine-print,[data-design=soft] .tango-project .video-player figcaption{color:#70636b}
+[data-design=soft] .studio-steps li{border-color:#dfd4cb}
+[data-design=soft] .studio-steps span,[data-design=soft] .studio-steps li:before{color:#70636b}
+[data-design=soft] .lesson-package{border:0;border-radius:28px;background:#eee5dd;padding:32px}
+[data-design=soft] .lesson-package:nth-child(2){background:#e9d9e1}
+[data-design=soft] .lesson-extra>div,[data-design=soft] .lesson-extra>article{border-radius:24px}
+[data-design=soft] form{border:0;border-radius:28px;background:#eee5dd;padding:32px}
+[data-design=soft] input,[data-design=soft] textarea,[data-design=soft] select{border-radius:14px}
+
+/* 2. A dark gallery, generous photographs and horizontal project browsing. */
+body[data-design=stage]{background:#0b1015}
+[data-design=stage] .section:not(#home){--ink:#edf3f3;--muted:#acbec4;--line:#33454d;--paper:#111c24;--preview-accent:#bbddcb;--preview-on-accent:#10251c;background:#0c141b;color:var(--ink);padding-block:110px}
+[data-design=stage] .section:nth-of-type(even):not(#home){background:#111e27}
+[data-design=stage] .section:not(#home) p,[data-design=stage] .section:not(#home) small,[data-design=stage] .section:not(#home) figcaption{color:#acbec4}
+[data-design=stage] .section:not(#home) h2,[data-design=stage] .section:not(#home) h3,[data-design=stage] .section:not(#home) h4{color:#edf3f3}
+[data-design=stage] .section:not(#home) em,[data-design=stage] .section:not(#home) .eyebrow,[data-design=stage] .section:not(#home) .credential-number{color:#bbddcb}
+[data-design=stage] .section:not(#home) .button{background:#bbddcb;color:#10251c;border-color:#bbddcb;border-radius:12px}
+[data-design=stage] .section:not(#home) .text-link{border-color:#bbddcb;color:#bbddcb}
+[data-design=stage] .section figure img,[data-design=stage] .section .photo-open{border-radius:18px}
+[data-design=stage] .portrait{max-width:470px}
+[data-design=stage] .occasion{border-color:#33454d}
+[data-design=stage] .occasion:hover{background:#1c303d}
+[data-design=stage] .duration-programme{background:#1b303b;border:1px solid #33454d;border-radius:20px}
+[data-design=stage] details,[data-design=stage] .credentials,[data-design=stage] .studio-steps li,[data-design=stage] .tango-roster li{border-color:#33454d}
+[data-design=stage] .video-links{display:flex;overflow-x:auto;gap:18px;scroll-snap-type:x mandatory;padding:8px 0 25px}
+[data-design=stage] .video-links>a{flex:0 0 45%;min-width:260px;scroll-snap-align:start;min-height:190px;align-items:flex-end;background:linear-gradient(145deg,#203d4b,#111c25);border:1px solid #3e5865;border-radius:20px;padding:28px}
+[data-design=stage] .video-links>a:hover{background:#244557;box-shadow:0 20px 50px #0004}
+[data-design=stage] .play{color:#bbddcb}
+[data-design=stage] .project-list{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+[data-design=stage] .music-project{display:block;border:1px solid #33454d;border-radius:24px;background:#162631;padding:32px}
+[data-design=stage] .music-project>div+div{margin-top:20px}
+[data-design=stage] #tango{grid-column:1/-1}
+[data-design=stage] #emil-dimitrov{display:grid;grid-template-columns:1fr 1fr;grid-column:1/-1;align-items:center}
+[data-design=stage] .tango-project .video-feature,[data-design=stage] .tango-project .tango-link{border-radius:20px;background:#213945;border-color:#3d5865}
+[data-design=stage] .tango-project .tango-roster span,[data-design=stage] .studio-steps span{color:#acbec4}
+[data-design=stage] .studio-image{max-width:960px}
+[data-design=stage] .lesson-package{border-color:#33454d;background:#172a35;border-radius:24px}
+[data-design=stage] .lesson-package:nth-child(2){border-color:#bbddcb;background:#213d45}
+[data-design=stage] .lesson-facts,[data-design=stage] .lesson-extra,[data-design=stage] .lesson-faq details{border-color:#33454d}
+[data-design=stage] .lesson-extra>div,[data-design=stage] .lesson-extra>article{background:#172a35;border-color:#33454d;border-radius:20px;padding:28px}
+[data-design=stage] form{border-radius:24px;background:#162631;border-color:#33454d}
+[data-design=stage] input,[data-design=stage] textarea,[data-design=stage] select{background:#101d26;color:#edf3f3;border-color:#47616e;border-radius:12px}
+[data-design=stage] .pricing article{background:#162631;border-color:#33454d;border-radius:18px}
+
+/* 3. Contemporary studio: white space, sans-serif headings and a bento rhythm. */
+body[data-design=studio]{background:#f3f4fa}
+[data-design=studio] .section:not(#home){--ink:#27273b;--muted:#686b80;--paper:#f1f1fa;--line:#dcddef;--preview-accent:#6157bc;--preview-on-accent:#fff;background:#fff;color:var(--ink);padding-block:95px}
+[data-design=studio] .section:not(#home) h2,[data-design=studio] .section:not(#home) h3,[data-design=studio] .section:not(#home) h4{font-family:var(--body);font-weight:600;letter-spacing:-.045em;color:#27273b;line-height:1.15}
+[data-design=studio] .section:not(#home) h2{font-size:clamp(2rem,4vw,3.8rem)}
+[data-design=studio] .section:not(#home) h3{font-size:1.7rem}
+[data-design=studio] .section:not(#home) p,[data-design=studio] .section:not(#home) small,[data-design=studio] .section:not(#home) figcaption{color:#686b80}
+[data-design=studio] .section:not(#home) em,[data-design=studio] .section:not(#home) .eyebrow{color:#6157bc}
+[data-design=studio] .section:not(#home) .button{background:#6157bc;color:#fff;border-color:#6157bc;border-radius:16px}
+[data-design=studio] .section:not(#home) .text-link{color:#6157bc;border-color:#6157bc}
+[data-design=studio] .section figure img,[data-design=studio] .section .photo-open{border-radius:32px}
+[data-design=studio] .concept{background:#f1f1fa!important}
+[data-design=studio] .about{gap:5vw;grid-template-columns:1fr 1.15fr}
+[data-design=studio] .credentials{border:0;gap:12px}
+[data-design=studio] .credentials>div{border-radius:22px;padding:20px;background:#f1f1fa}
+[data-design=studio] .credential-number{font:600 2rem var(--body);color:#6157bc}
+[data-design=studio] .occasion-presentation{grid-template-columns:1fr}
+[data-design=studio] .occasion-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+[data-design=studio] .occasion,[data-design=studio] .occasion:nth-child(n){border:0;border-radius:24px;background:#f1f1fa;padding:26px 22px;gap:15px}
+[data-design=studio] .occasion h3{font-size:1.6rem!important}
+[data-design=studio] .occasion:hover{background:#e2def8;box-shadow:0 15px 35px #5951a81a}
+[data-design=studio] .event-image img{max-height:470px;object-position:center 35%}
+[data-design=studio] .duration-programme{border:0;border-radius:28px;background:#e8e5fb;padding:32px}
+[data-design=studio] .video-links{gap:18px}
+[data-design=studio] .video-links>a{border:0;border-radius:24px;background:#f1f1fa;padding:28px;min-height:150px;color:#27273b}
+[data-design=studio] .play{color:#6157bc}
+[data-design=studio] .music-project{padding:35px;border:0;border-radius:30px;background:#f1f1fa;margin-top:20px;gap:32px}
+[data-design=studio] .tango-project .video-feature,[data-design=studio] .tango-project .tango-link{border:0;border-radius:24px;background:#e8e5fb;color:#27273b}
+[data-design=studio] .tango-project .tango-roster span,[data-design=studio] .tango-project .fine-print,[data-design=studio] .tango-project .video-player figcaption,[data-design=studio] .studio-steps span{color:#686b80}
+[data-design=studio] .tango-project .tango-roster li,[data-design=studio] details,[data-design=studio] .studio-steps li{border-color:#dcddef}
+[data-design=studio] #studio{background:#f1f1fa;border:0}
+[data-design=studio] .studio-image{max-width:900px}
+[data-design=studio] .lesson-package-grid{gap:18px}
+[data-design=studio] .lesson-package{border:0;border-radius:28px;background:#f1f1fa;padding:32px}
+[data-design=studio] .lesson-package:nth-child(2){background:#e8e5fb;box-shadow:0 18px 45px #4a3b9b16}
+[data-design=studio] .package-price{font-family:var(--body);font-weight:600;letter-spacing:-.06em;color:#6157bc}
+[data-design=studio] .lesson-extra>div,[data-design=studio] .lesson-extra>article{background:#f1f1fa;border:0;border-radius:24px;padding:28px}
+[data-design=studio] form{border:0;border-radius:28px;background:#f1f1fa}
+[data-design=studio] input,[data-design=studio] textarea,[data-design=studio] select{border-radius:14px;background:#fff}
+
+@media(max-width:1100px){[data-design=studio] .occasion-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){
+ .design-toolbar{padding:10px 16px;gap:6px;font-size:.75rem}
+ .design-toolbar nav{gap:3px}.design-toolbar a{padding:7px 9px}
+ .design-toolbar>span{display:none}
+ [data-design=soft] .section:not(#home){margin:14px 10px;padding:40px 22px;border-radius:28px}
+ [data-design=soft] .music-project,[data-design=studio] .music-project,[data-design=stage] .music-project{padding:24px 18px}
+ [data-design=soft] .credentials,[data-design=studio] .credentials{grid-template-columns:1fr}
+ [data-design=stage] .section:not(#home),[data-design=studio] .section:not(#home){padding:55px 24px}
+ [data-design=stage] .project-list,[data-design=studio] .about{grid-template-columns:1fr}
+ [data-design=stage] #emil-dimitrov{grid-template-columns:1fr;grid-column:auto}
+ [data-design=studio] .occasion-grid{grid-template-columns:1fr}
+ [data-design=stage] .video-links>a{flex-basis:86%;min-width:240px}
+ .photo-dialog{padding:10px}.photo-dialog img{max-width:90vw}
+ .preview-filters button,.programme-options button{padding:9px 13px}
+}
+/* First-direction refinements: clear original type, distinct rooms and a gold finale. */
+[data-design=soft] .section:not(#home){--ink:#2d2428;--muted:#443b42;color:var(--ink)}
+[data-design=soft] .section:not(#home) p,[data-design=soft] .section:not(#home) small,[data-design=soft] .section:not(#home) li,[data-design=soft] .section:not(#home) .studio-steps span{color:var(--muted)}
+[data-design=soft] .section:not(#home) .lead{color:var(--ink)}
+[data-design=soft] .section:not(#home) .eyebrow,[data-design=soft] .section:not(#home) em,[data-design=soft] .section:not(#home) .credential-number{color:#604254}
+[data-design=soft] .section figcaption,[data-design=soft] .video-links small,[data-design=soft] .tango-project .tango-roster span,[data-design=soft] .tango-project .fine-print,[data-design=soft] .tango-project .video-player figcaption{color:#51474d}
+[data-design=soft] .portrait img{height:auto;max-height:none;object-fit:contain;border-radius:28px}
+[data-design=soft] .section#studio{background:#e1d5dd;--ink:#302630;--muted:#42333e;--line:#bca9b5;box-shadow:inset 0 0 0 1px #bca9b540}
+[data-design=soft] #studio .eyebrow,[data-design=soft] #studio em{color:#593c50}
+[data-design=soft] #studio .studio-steps li{border-color:#bca9b5}
+[data-design=soft] #studio .studio-steps span,[data-design=soft] #studio .studio-steps li:before{color:#42333e}
+[data-design=soft] .section#lessons{background:#fffaf1;--line:#d3c6b5;box-shadow:inset 0 0 0 1px #d3c6b540}
+[data-design=soft] .lesson-package:nth-child(1){background:#e2e9e2}
+[data-design=soft] .lesson-package:nth-child(2){background:#e3d5e1}
+[data-design=soft] .lesson-package:nth-child(3){background:linear-gradient(145deg,#f9e9bb 0%,#eed188 58%,#dcba62 100%);border:1px solid #bf9135;box-shadow:0 15px 35px #8e611b24;position:relative}
+[data-design=soft] #lessons .lesson-package:nth-child(3) h3,[data-design=soft] #lessons .lesson-package:nth-child(3) .package-price{color:#3d2b14}
+[data-design=soft] #lessons .lesson-package:nth-child(3) p,[data-design=soft] #lessons .lesson-package:nth-child(3) li,[data-design=soft] #lessons .lesson-package:nth-child(3) .package-price span{color:#493619}
+[data-design=soft] #lessons .lesson-package:nth-child(3) .eyebrow{color:#604118}
+[data-design=soft] #lessons .lesson-package:nth-child(3) .button{background:#513817;border-color:#513817;color:#fff9ec}
+[data-design=soft] #lessons .lesson-package:nth-child(3) .button:hover{background:#6a4b1d}
+[data-design=soft] .section:not(#home) .button{font-weight:600}
+[data-design=soft] .section .text-link{color:#553849}
+[data-design=soft] .pricing article,[data-design=soft] .interview-link{border-radius:22px}
+[data-design=soft] .video-player video{border-radius:18px}
+[data-design=soft] .occasion h3{font-size:clamp(1.4rem,1.8vw,1.85rem);line-height:1.4;overflow-wrap:anywhere;hyphens:auto}
+[data-design=soft] .occasion h3 br{display:initial}
+[data-design=soft] .occasion-presentation,[data-design=soft] .format-layout,[data-design=soft] .format-list,[data-design=soft] .lesson-package{min-width:0}
+[data-design=soft] .format-list h3{overflow-wrap:anywhere}
+[data-design=soft] .duration-programme{background:#f4ede6;transition:background .25s,box-shadow .25s}
+[data-design=soft] #formats .duration-programme h3{color:#6a5862;transition:color .25s}
+[data-design=soft] #formats .duration-programme p{color:#6c5c65;transition:color .25s}
+[data-design=soft] .duration-programme:is(:hover,:focus-within){background:#e7dad5;box-shadow:0 12px 30px #4a263b12}
+[data-design=soft] #formats .duration-programme:is(:hover,:focus-within) h3{color:#2d2428}
+[data-design=soft] #formats .duration-programme:is(:hover,:focus-within) p{color:#3e3039}
+[data-design=soft] .section:not(#home) .button:is(:hover,:focus-visible){background:#4f3447;border-color:#4f3447;color:#fff}
+[data-design=soft] #lessons .lesson-package:nth-child(3) .button:is(:hover,:focus-visible){background:#35230f;border-color:#35230f;color:#fff9ec}
+[data-design=soft] :is(.programme-options,.preview-filters) button:is(:hover,:focus-visible){background:#d7c1ce;border-color:#6f5263;color:#3c2935}
+[data-design=soft] :is(.programme-options,.preview-filters) button[aria-pressed=true]:is(:hover,:focus-visible){background:#4f3447;border-color:#4f3447;color:#fff}
+@media(min-width:901px) and (max-width:1250px){[data-design=soft] .occasion-presentation{grid-template-columns:minmax(0,1fr)}}
+.site-experience .lesson-package-grid{scroll-margin-top:90px}
+@media(prefers-reduced-motion:reduce){.site-experience .reveal-ready{opacity:1;transform:none;transition:none}.site-experience .section img{transition:none}summary:after{transition:none}}
