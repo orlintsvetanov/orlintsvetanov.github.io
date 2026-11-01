@@ -30,6 +30,8 @@ const english = {
   "Сценични проекти": "Stage projects",
   "Авторска музика": "Original music",
   "Продължителност на програмата": "Programme duration",
+  "Желана продължителност: ": "Preferred duration: ",
+  "Към запитването": "Continue to your enquiry",
   "Един час": "One hour",
   "Час и половина": "An hour and a half",
   "Два часа": "Two hours",

@@ -137,6 +137,12 @@ const form=document.getElementById('inquiry');
 const kind=document.getElementById('kind');
 const message=document.getElementById('message');
 const status=document.getElementById('form-status');
+const eventDuration=document.createElement('p');
+eventDuration.className='selected-package';
+eventDuration.id='event-duration-choice';
+eventDuration.setAttribute('role','status');
+eventDuration.hidden=true;
+document.getElementById('lesson-choice').after(eventDuration);
 function updateFields() {
   const studio = kind.value === 'Студиен запис';
   const lesson = kind.value === 'Урок по цигулка';
@@ -145,8 +151,15 @@ function updateFields() {
   const choice = document.getElementById('lesson-choice');
   choice.hidden = !(lesson && form.dataset.lessonPackage);
   choice.textContent = choice.hidden ? '' : t('Избран вариант: ') + t(form.dataset.lessonPackage);
+  eventDuration.hidden = kind.value !== 'Участие' || !form.dataset.eventDuration;
+  eventDuration.textContent = eventDuration.hidden ? '' : t('Желана продължителност: ') + t(form.dataset.eventDuration);
 }
 kind.addEventListener('change', () => { delete form.dataset.lessonPackage; updateFields(); });
+window.addEventListener('programme-duration-change', event => {
+  if (event.detail) form.dataset.eventDuration = event.detail;
+  else delete form.dataset.eventDuration;
+  updateFields();
+});
 document.querySelectorAll('[data-kind]').forEach(link => link.addEventListener('click', () => {
   kind.value = link.dataset.kind;
   if (link.dataset.package) {
@@ -156,7 +169,7 @@ document.querySelectorAll('[data-kind]').forEach(link => link.addEventListener('
   updateFields();
   if (link.dataset.occasion && !message.value.trim()) message.value = link.dataset.occasion + ' - ';
 }));
-form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;const data=new FormData(form);const lines=[t('Здравейте, Орлин,'),'',t('Интересувам се от: ')+t(data.get('kind')),t('Име: ')+String(data.get('name')).trim(),t('Имейл: ')+data.get('email')];if(kind.value==='Урок по цигулка'&&form.dataset.lessonPackage)lines.push(t('Избран вариант: ')+t(form.dataset.lessonPackage));if(kind.value!=='Студиен запис'&&kind.value!=='Урок по цигулка'){const date=data.get('date');const readable=date?date.split('-').reverse().join('.'):t('За уточняване');lines.push(t('Желана дата: ')+readable,t('Място: ')+(data.get('place')||t('За уточняване')));}lines.push('',String(data.get('message')).trim());const body=lines.join('\n');document.getElementById('mail-copy').value=body;document.getElementById('fallback').hidden=false;status.textContent=t('Запитването е подготвено. Изпратете го от вашето имейл приложение.');window.location.href='mailto:orlintsvetanov@gmail.com?subject='+encodeURIComponent(t('Запитване: ')+t(data.get('kind')))+'&body='+encodeURIComponent(body);});
+form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;const data=new FormData(form);const lines=[t('Здравейте, Орлин,'),'',t('Интересувам се от: ')+t(data.get('kind')),t('Име: ')+String(data.get('name')).trim(),t('Имейл: ')+data.get('email')];if(kind.value==='Урок по цигулка'&&form.dataset.lessonPackage)lines.push(t('Избран вариант: ')+t(form.dataset.lessonPackage));if(kind.value==='Участие'&&form.dataset.eventDuration)lines.push(t('Желана продължителност: ')+t(form.dataset.eventDuration));if(kind.value!=='Студиен запис'&&kind.value!=='Урок по цигулка'){const date=data.get('date');const readable=date?date.split('-').reverse().join('.'):t('За уточняване');lines.push(t('Желана дата: ')+readable,t('Място: ')+(data.get('place')||t('За уточняване')));}lines.push('',String(data.get('message')).trim());const body=lines.join('\n');document.getElementById('mail-copy').value=body;document.getElementById('fallback').hidden=false;status.textContent=t('Запитването е подготвено. Изпратете го от вашето имейл приложение.');window.location.href='mailto:orlintsvetanov@gmail.com?subject='+encodeURIComponent(t('Запитване: ')+t(data.get('kind')))+'&body='+encodeURIComponent(body);});
 document.getElementById('copy').addEventListener('click',async()=>{const field=document.getElementById('mail-copy');try{await navigator.clipboard.writeText(field.value);status.textContent=t('Запитването е копирано.');}catch{field.focus();field.select();status.textContent=t('Текстът е маркиран. Копирайте го от менюто на устройството.');}});
 if('IntersectionObserver'in window){const links=[...nav.querySelectorAll('a[href^="#"]')];const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(link=>{if(link.hash==='#'+entry.target.id)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});document.querySelector('.nav-group').classList.toggle('is-current',!!submenu.querySelector('[aria-current]'));}});},{rootMargin:'-15% 0px -60% 0px'});links.forEach(link=>{const section=document.querySelector(link.hash);if(section)observer.observe(section);});}
 updateFields();

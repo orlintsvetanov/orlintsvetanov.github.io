@@ -19,10 +19,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',
 const programme = document.querySelector('.duration-programme');
 const programmeOptions=document.createElement('div');programmeOptions.className='programme-options';programmeOptions.setAttribute('role','group');programmeOptions.setAttribute('aria-label','Продължителност на програмата');
 const programmeStatus=document.createElement('p');programmeStatus.className='programme-status';programmeStatus.setAttribute('role','status');programmeStatus.textContent='Избираме продължителността според вашето събитие.';
+const programmeInquiry=document.createElement('a');programmeInquiry.className='text-link';programmeInquiry.href='#inquiry';programmeInquiry.textContent=presentationText('Към запитването');
+programmeInquiry.addEventListener('click',()=>{const kind=document.getElementById('kind');if(kind.value!=='Участие'){kind.value='Участие';kind.dispatchEvent(new Event('change',{bubbles:true}));}});
 let selectedProgramme = '';
 const programmeLabels = ['Един час','Час и половина','Два часа'];
-for(const label of programmeLabels){const b=document.createElement('button');b.type='button';b.textContent=label;b.setAttribute('aria-pressed','false');b.addEventListener('click',()=>{programmeOptions.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));selectedProgramme=label;programmeStatus.textContent=presentationText('Избран ориентир: '+label.toLowerCase()+' музика на живо.');});programmeOptions.append(b);}
-programme.querySelector('.duration-description').after(programmeOptions,programmeStatus);
+for(const label of programmeLabels){const b=document.createElement('button');b.type='button';b.textContent=label;b.setAttribute('aria-pressed','false');b.addEventListener('click',()=>{selectedProgramme=selectedProgramme===label?'':label;programmeOptions.querySelectorAll('button').forEach((x,index)=>x.setAttribute('aria-pressed',String(programmeLabels[index]===selectedProgramme)));programmeStatus.textContent=presentationText(selectedProgramme?'Избран ориентир: '+selectedProgramme.toLowerCase()+' музика на живо.':'Избираме продължителността според вашето събитие.');window.dispatchEvent(new CustomEvent('programme-duration-change',{detail:selectedProgramme}));});programmeOptions.append(b);}
+programme.querySelector('.duration-description').after(programmeOptions,programmeStatus,programmeInquiry);
 const photoDialog=document.createElement('dialog');photoDialog.className='photo-dialog';photoDialog.setAttribute('aria-label','Преглед на фотография');
 const largePhoto=document.createElement('img');const photoCaption=document.createElement('p');const closePhoto=document.createElement('button');closePhoto.className='close-photo';closePhoto.type='button';closePhoto.setAttribute('aria-label','Затворете снимката');closePhoto.textContent='×';photoDialog.append(largePhoto,photoCaption,closePhoto);document.body.append(photoDialog);
 let currentPhoto = null;
@@ -34,6 +36,7 @@ function syncPresentationLanguage() {
  programmeOptions.setAttribute('aria-label',presentationText('Продължителност на програмата'));
  programmeLabels.forEach((label,index)=>programmeOptions.children[index].textContent=presentationText(label));
  programmeStatus.textContent=presentationText(selectedProgramme?'Избран ориентир: '+selectedProgramme.toLowerCase()+' музика на живо.':'Избираме продължителността според вашето събитие.');
+ programmeInquiry.textContent=presentationText('Към запитването');
  photoDialog.setAttribute('aria-label',presentationText('Преглед на фотография'));
  closePhoto.setAttribute('aria-label',presentationText('Затворете снимката'));
  document.querySelectorAll('.photo-open').forEach(button=>button.setAttribute('aria-label',presentationText('Разгледайте снимката: ')+button.querySelector('img').alt));
