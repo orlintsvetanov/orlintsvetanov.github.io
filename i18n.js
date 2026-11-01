@@ -1,4 +1,11 @@
 const english = {
+  "Онлайн уроци": "Online lessons",
+  "Участия": "Live events",
+  "Орлин Цветанов | Цигулар за събития и онлайн уроци": "Orlin Tsvetanov | Violinist for events and online lessons",
+  "Цигулар за сватби, частни и корпоративни събития в София. Индивидуални онлайн уроци по цигулка с Орлин Цветанов.": "Violinist for weddings, private and corporate events in Sofia. Individual online violin lessons with Orlin Tsvetanov.",
+  "Повече за музиката за събития": "More about music for events",
+  "Повече за онлайн уроците": "More about online lessons",
+  "Интервю за bTV, 2022 г.": "Interview with bTV, 2022",
   "Време за музика.": "Time for music.",
   "Един час, час и половина или два часа музика на живо.": "An hour, an hour and a half, or two hours of live music.",
   "Изберете свободен час": "Choose a lesson time",
@@ -137,7 +144,9 @@ const english = {
   "Посрещане и welcome drink": "Arrival and welcome drinks",
   "Музика за първите срещи и разговори, коктейла или вечерята. Продължителността и програмата се съобразяват с повода.": "Music for first encounters and conversations, cocktails or dinner. The duration and programme are tailored to the occasion.",
   "Хонорари за солово участие": "Solo performance fees",
-  "Формати, цени и условия": "Formats, prices and terms",
+  "Формати и условия": "Formats and terms",
+  "Хонорарът се уточнява по телефона.": "Please call to discuss the performance fee.",
+  "Цената се уточнява по телефона.": "Please call to discuss the price.",
   "Частни празници": "Private celebrations",
   "/ час": "/ hour",
   "Лично музикално присъствие и репертоар, подбран за вашите гости.": "A personal musical presence and repertoire chosen for your guests.",
@@ -149,7 +158,7 @@ const english = {
   "/ участие": "/ performance",
   "При регулярни ангажименти условията се договарят индивидуално.": "Terms for regular engagements are agreed individually.",
   "Обсъдете сътрудничество": "Discuss a collaboration",
-  "Посочените суми са нетен хонорар за 60 минути музика, без ДДС. Начинът на договаряне и общата сума за възложителя се уточняват в индивидуалната оферта.": "The listed amounts are net artist fees for 60 minutes of music, excluding VAT. Contractual arrangements and the total cost to the client are specified in an individual offer.",
+  "Хонорарите са нетни и без ДДС, за 60 минути музика. Начинът на договаряне и общата сума за възложителя се уточняват в индивидуалната оферта.": "The fees are net and exclude VAT for 60 minutes of music. Contractual arrangements and the total cost to the client are specified in an individual offer.",
   "Техническа подготовка и организация": "Technical preparation and organisation",
   "От мен": "What I provide",
   "Осигурявам сценично облекло, акустична или електрическа цигулка и предварително подготвен репертоар. Използвам компютър с предварително миксирани инструментални тракове (подложки) и малък миксер. Към озвучителната система подавам стерео сигнал - ляв и десен канал - чрез два кабела.": "I provide stage attire, an acoustic or electric violin and a prepared repertoire. I use a computer with pre-mixed instrumental backing tracks and a small mixer. I send a stereo signal, left and right channels, to the sound system through two cables.",
@@ -286,7 +295,7 @@ const english = {
   "Запитване за пробен урок": "Enquire about a trial lesson",
   "ЕДНОКРАТНА СРЕЩА": "A SINGLE SESSION",
   "Единичен урок": "Single lesson",
-  "45 минути · 50 €": "45 minutes · €50",
+  "45 минути · Цената се уточнява по телефона.": "45 minutes · Please call to discuss the price.",
   "За конкретен въпрос, пиеса или самостоятелна среща извън пакетите.": "For a specific question, a piece or a standalone session outside a package.",
   "Запитване за единичен урок": "Enquire about a single lesson",
   "Изборът на пакет подготвя запитване към мен. Онлайн плащането и календарът за самостоятелно записване все още не са активни.": "Selecting a package prepares an enquiry to me. Online payment and the self-booking calendar are not yet active.",
@@ -348,11 +357,11 @@ const english = {
   "Libertango - Tango Cats, инструментално изпълнение на живо": "Libertango - Tango Cats, live instrumental performance",
   "Орлин Цветанов с цигулка на сцената в спектакъла за Емил Димитров на Ники Априлов": "Orlin Tsvetanov with his violin on stage in Niki Aprilov's tribute to Emil Dimitrov",
   "Орлин Цветанов записва цигулка със слушалки сред студийни микрофони и акустични панели": "Orlin Tsvetanov recording violin with headphones, studio microphones and acoustic panels",
-  "Малък пакет - 4 урока по 45 минути, 199 €": "Small package - 4 lessons of 45 minutes, €199",
-  "Среден пакет - 8 урока по 45 минути, 379 €": "Medium package - 8 lessons of 45 minutes, €379",
-  "Голям пакет - 12 урока по 45 минути, 499 €": "Large package - 12 lessons of 45 minutes, €499",
+  "Малък пакет - 4 урока по 45 минути": "Small package - 4 lessons of 45 minutes",
+  "Среден пакет - 8 урока по 45 минути": "Medium package - 8 lessons of 45 minutes",
+  "Голям пакет - 12 урока по 45 минути": "Large package - 12 lessons of 45 minutes",
   "Пробен урок - 15-20 минути, безплатно": "Trial lesson - 15-20 minutes, free",
-  "Единичен урок - 45 минути, 50 €": "Single lesson - 45 minutes, €50",
+  "Единичен урок - 45 минути": "Single lesson - 45 minutes",
   "Вашето име": "Your name",
   "Място на събитието": "Event venue",
   "Повод, брой гости и атмосферата, която си представяте…": "Occasion, number of guests and the atmosphere you have in mind…",
@@ -379,19 +388,22 @@ const english = {
 };
 let currentLanguage = 'bg';
 window.siteTranslate = text => currentLanguage === 'en' ? (english[text] ?? text) : text;
+const englishToBulgarian = new Map(Object.entries(english).map(([bg, en]) => [en, bg]));
 const translatedText = [];
 const walker = document.createTreeWalker(document.documentElement, NodeFilter.SHOW_TEXT);
 while (walker.nextNode()) {
  const node = walker.currentNode;
  if (node.parentElement.closest('script,style')) continue;
- const key = node.nodeValue.trim();
- if (Object.hasOwn(english, key)) translatedText.push({node, key, original: node.nodeValue});
+ const visibleText = node.nodeValue.trim();
+ const key = Object.hasOwn(english, visibleText) ? visibleText : englishToBulgarian.get(visibleText);
+ if (key) translatedText.push({node, key, original: node.nodeValue.replace(visibleText, key)});
 }
 const translatedAttributes = [];
 for (const node of document.querySelectorAll('*')) {
  for (const name of ['alt', 'aria-label', 'placeholder', 'content', 'data-occasion']) {
-  const original = node.getAttribute(name);
-  if (original && Object.hasOwn(english, original)) translatedAttributes.push({node, name, original});
+  const value = node.getAttribute(name);
+  const original = value && (Object.hasOwn(english, value) ? value : englishToBulgarian.get(value));
+  if (original) translatedAttributes.push({node, name, original});
  }
 }
 function setLanguage(language, updateURL = true) {
@@ -404,19 +416,22 @@ function setLanguage(language, updateURL = true) {
  document.documentElement.lang = language;
  const canonical = document.querySelector('link[rel="canonical"]');
  if (canonical) {
-  const canonicalURL = new URL(canonical.href);
-  canonicalURL.search = language === 'en' ? '?lang=en' : '';
+  const canonicalURL = new URL(language === 'en' ? '/en/' : '/', canonical.href);
   canonical.href = canonicalURL.href;
-  document.querySelector('meta[property="og:url"]').content = canonicalURL.href;
+  document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonicalURL.href);
  }
  document.querySelector('meta[property="og:locale"]')?.setAttribute('content', language === 'en' ? 'en_GB' : 'bg_BG');
  document.querySelector('meta[property="og:locale:alternate"]')?.setAttribute('content', language === 'en' ? 'bg_BG' : 'en_GB');
  for (const {node,key,original} of translatedText) node.nodeValue = original.replace(key, siteTranslate(key));
  for (const {node,name,original} of translatedAttributes) node.setAttribute(name, siteTranslate(original));
+ for (const link of document.querySelectorAll('[data-bg-href][data-en-href]')) {
+  link.href = language === 'en' ? link.dataset.enHref : link.dataset.bgHref;
+ }
  for (const button of document.querySelectorAll('[data-language]')) button.setAttribute('aria-pressed', String(button.dataset.language === language));
  try { localStorage.setItem('orlin-language', language); } catch {}
  if (updateURL) {
-  const url = new URL(location.href); url.searchParams.set('lang', language);
+  const url = new URL(location.href); url.pathname = language === 'en' ? '/en/' : '/';
+  url.searchParams.delete('lang');
   history.replaceState(null, '', url);
  }
  window.dispatchEvent(new Event('site-language-change'));
@@ -426,6 +441,14 @@ function setLanguage(language, updateURL = true) {
  });
 }
 for (const button of document.querySelectorAll('[data-language]')) button.addEventListener('click', () => setLanguage(button.dataset.language));
-let initialLanguage = new URL(location.href).searchParams.get('lang');
-if (!['bg','en'].includes(initialLanguage)) { try { initialLanguage = localStorage.getItem('orlin-language'); } catch {} }
-setLanguage(initialLanguage === 'en' ? 'en' : 'bg', false);
+const initialURL = new URL(location.href);
+const englishPath = /^\/en\/?$/.test(initialURL.pathname);
+let initialLanguage = initialURL.searchParams.get('lang');
+if (!['bg','en'].includes(initialLanguage)) {
+ // The address selected by the visitor determines the language on arrival.
+ // A remembered preference must not override links from a Bulgarian page.
+ initialLanguage = englishPath ? 'en' : 'bg';
+}
+initialLanguage = initialLanguage === 'en' ? 'en' : 'bg';
+const needsURLUpdate = (initialLanguage === 'en') !== englishPath || initialURL.searchParams.has('lang');
+setLanguage(initialLanguage, needsURLUpdate);

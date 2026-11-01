@@ -1,5 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://orlintsvetanov.com/</loc><xhtml:link rel="alternate" hreflang="bg" href="https://orlintsvetanov.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://orlintsvetanov.com/?lang=en"/></url>
-  <url><loc>https://orlintsvetanov.com/?lang=en</loc><xhtml:link rel="alternate" hreflang="bg" href="https://orlintsvetanov.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://orlintsvetanov.com/?lang=en"/></url>
+  <url>
+    <loc>https://orlintsvetanov.com/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://orlintsvetanov.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://orlintsvetanov.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orlintsvetanov.com/" />
+  </url>
+  <url>
+    <loc>https://orlintsvetanov.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://orlintsvetanov.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://orlintsvetanov.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orlintsvetanov.com/" />
+  </url>
+  <url>
+    <loc>https://orlintsvetanov.com/tsigular-za-sabitiya/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://orlintsvetanov.com/tsigular-za-sabitiya/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://orlintsvetanov.com/en/violinist-for-events/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orlintsvetanov.com/tsigular-za-sabitiya/" />
+  </url>
+  <url>
+    <loc>https://orlintsvetanov.com/en/violinist-for-events/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://orlintsvetanov.com/tsigular-za-sabitiya/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://orlintsvetanov.com/en/violinist-for-events/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orlintsvetanov.com/tsigular-za-sabitiya/" />
+  </url>
+  <url>
+    <loc>https://orlintsvetanov.com/urotsi-po-cigulka/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://orlintsvetanov.com/urotsi-po-cigulka/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://orlintsvetanov.com/en/online-violin-lessons/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orlintsvetanov.com/urotsi-po-cigulka/" />
+  </url>
+  <url>
+    <loc>https://orlintsvetanov.com/en/online-violin-lessons/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://orlintsvetanov.com/urotsi-po-cigulka/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://orlintsvetanov.com/en/online-violin-lessons/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orlintsvetanov.com/urotsi-po-cigulka/" />
+  </url>
 </urlset>

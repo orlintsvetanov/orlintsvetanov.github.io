@@ -557,3 +557,6 @@ form#inquiry{scroll-margin-top:24px}
 @keyframes nav-glint-halo{0%,100%{box-shadow:0 0 0 0 #f3cc8200}35%{box-shadow:0 0 18px 2px #f3cc8255;border-color:#f3cc82}}
 @media(max-width:700px){.hero-image .bow-sheen{transform-origin:left top}}
 @media(prefers-reduced-motion:reduce){.hero-image .bow-sheen{display:none;animation:none!important}.navigation-glint,.navigation-glint:after{animation:none!important}.navigation-glint:after{display:none}}
+
+/* Keep the enquiry text readable in the existing package cards. */
+.pricing .price-on-request,.lesson-package .price-on-request{font:600 .95rem/1.5 var(--body);white-space:normal;color:var(--wine)}
