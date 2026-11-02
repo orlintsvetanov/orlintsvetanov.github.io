@@ -30,6 +30,7 @@ const english = {
   "Сценични проекти": "Stage projects",
   "Авторска музика": "Original music",
   "Продължителност на програмата": "Programme duration",
+  "Един от създателите": "One of the founders",
   "Желана продължителност: ": "Preferred duration: ",
   "Към запитването": "Continue to your enquiry",
   "Един час": "One hour",
