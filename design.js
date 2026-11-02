@@ -16,6 +16,19 @@ for (const [value,label] of filterChoices) {
 }
 projectList.before(filterBar);
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{const target=document.getElementById(a.hash.slice(1));if(target?.matches('.music-project'))selectProjects('all');}));
+// The Sofia Soloists highlight points into the expandable biography.
+const soloistsBiography = document.querySelector('.bio-details');
+const soloistsTarget = document.getElementById('sofia-soloists-bio');
+document.querySelectorAll('a[href="#sofia-soloists-bio"]').forEach(link=>link.addEventListener('click',()=>{
+ if(soloistsBiography) soloistsBiography.open = true;
+}));
+function revealSoloistsBiography() {
+ if(location.hash !== '#sofia-soloists-bio' || !soloistsBiography || !soloistsTarget) return;
+ soloistsBiography.open = true;
+ requestAnimationFrame(()=>soloistsTarget.scrollIntoView());
+}
+window.addEventListener('hashchange', revealSoloistsBiography);
+revealSoloistsBiography();
 const programme = document.querySelector('.duration-programme');
 const programmeOptions=document.createElement('div');programmeOptions.className='programme-options';programmeOptions.setAttribute('role','group');programmeOptions.setAttribute('aria-label','Продължителност на програмата');
 const programmeStatus=document.createElement('p');programmeStatus.className='programme-status';programmeStatus.setAttribute('role','status');programmeStatus.textContent='Избираме продължителността според вашето събитие.';

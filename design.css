@@ -35,7 +35,7 @@ body[data-design=soft]{background:#eee9e1}
 [data-design=soft] .section:not(#home) .button{border-radius:28px;background:#735166;border-color:#735166;color:#fff}
 [data-design=soft] .section:not(#home) .text-link{border-color:#735166;color:#604254}
 [data-design=soft] .credentials{gap:10px;border:0;padding:0;margin-block:32px}
-[data-design=soft] .credentials>div{background:#eee5dd;border-radius:20px;padding:20px}
+[data-design=soft] .credentials>*{background:#eee5dd;border-radius:20px;padding:20px}
 [data-design=soft] .credential-number{color:#735166}
 [data-design=soft] .bio-details,[data-design=soft] details{border-color:#dfd4cb}
 [data-design=soft] .occasion-grid{gap:14px}
@@ -106,7 +106,7 @@ body[data-design=studio]{background:#f3f4fa}
 [data-design=studio] .concept{background:#f1f1fa!important}
 [data-design=studio] .about{gap:5vw;grid-template-columns:1fr 1.15fr}
 [data-design=studio] .credentials{border:0;gap:12px}
-[data-design=studio] .credentials>div{border-radius:22px;padding:20px;background:#f1f1fa}
+[data-design=studio] .credentials>*{border-radius:22px;padding:20px;background:#f1f1fa}
 [data-design=studio] .credential-number{font:600 2rem var(--body);color:#6157bc}
 [data-design=studio] .occasion-presentation{grid-template-columns:1fr}
 [data-design=studio] .occasion-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
@@ -189,3 +189,10 @@ body[data-design=studio]{background:#f3f4fa}
 @media(min-width:901px) and (max-width:1250px){[data-design=soft] .occasion-presentation{grid-template-columns:minmax(0,1fr)}}
 .site-experience .lesson-package-grid{scroll-margin-top:90px}
 @media(prefers-reduced-motion:reduce){.site-experience .reveal-ready{opacity:1;transform:none;transition:none}.site-experience .section img{transition:none}summary:after{transition:none}}
+
+[data-design=soft] .credentials>a,[data-design=studio] .credentials>a{padding-right:3.25rem}
+@media(max-width:600px){
+ .credentials>a{grid-template-columns:90px minmax(0,1fr);gap:12px}
+ [data-design=soft] .credentials>a,[data-design=studio] .credentials>a{padding:18px 42px 18px 16px}
+ .credentials>a::after{right:14px}
+}

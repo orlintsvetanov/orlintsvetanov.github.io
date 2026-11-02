@@ -36,4 +36,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://orlintsvetanov.com/en/online-violin-lessons/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://orlintsvetanov.com/urotsi-po-cigulka/" />
   </url>
+  <url>
+    <loc>https://orlintsvetanov.com/sofiyski-solisti/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://orlintsvetanov.com/sofiyski-solisti/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://orlintsvetanov.com/en/sofia-soloists/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orlintsvetanov.com/sofiyski-solisti/" />
+  </url>
+  <url>
+    <loc>https://orlintsvetanov.com/en/sofia-soloists/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://orlintsvetanov.com/sofiyski-solisti/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://orlintsvetanov.com/en/sofia-soloists/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orlintsvetanov.com/sofiyski-solisti/" />
+  </url>
 </urlset>

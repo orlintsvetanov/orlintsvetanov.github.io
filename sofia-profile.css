@@ -1,0 +1,8 @@
+.profile-hero .hero-figure img{width:100%;max-height:none;border-radius:4px;box-shadow:0 18px 55px rgba(45,36,40,.12)}
+.profile-hero .hero-figure figcaption{text-align:right}
+.sources .card{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.sources .card .source-year{margin:0;color:#79552b;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+.sources .card h3{font-size:1.75rem;line-height:1.2}
+.sources .card a{margin-top:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:800px){.profile-hero .hero-figure figcaption{text-align:left}}
