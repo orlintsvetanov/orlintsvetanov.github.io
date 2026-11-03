@@ -160,8 +160,8 @@ body[data-design=studio]{background:#f3f4fa}
 [data-design=soft] #studio .studio-steps li{border-color:#bca9b5}
 [data-design=soft] #studio .studio-steps span,[data-design=soft] #studio .studio-steps li:before{color:#42333e}
 [data-design=soft] .section#lessons{background:#fffaf1;--line:#d3c6b5;box-shadow:inset 0 0 0 1px #d3c6b540}
-[data-design=soft] .lesson-package:nth-child(1){background:#e2e9e2}
-[data-design=soft] .lesson-package:nth-child(2){background:#e3d5e1}
+[data-design=soft] .lesson-package:nth-child(1){background:linear-gradient(145deg,#f3f4f5 0%,#e2e5e7 57%,#cbd1d5 100%);border:1px solid #b4bec4}
+[data-design=soft] .lesson-package:nth-child(2){background:linear-gradient(145deg,#f1edef 0%,#e1dce2 57%,#c7bec8 100%);border:1px solid #baacb9}
 [data-design=soft] .lesson-package:nth-child(3){background:linear-gradient(145deg,#f9e9bb 0%,#eed188 58%,#dcba62 100%);border:1px solid #bf9135;box-shadow:0 15px 35px #8e611b24;position:relative}
 [data-design=soft] #lessons .lesson-package:nth-child(3) h3,[data-design=soft] #lessons .lesson-package:nth-child(3) .package-price{color:#3d2b14}
 [data-design=soft] #lessons .lesson-package:nth-child(3) p,[data-design=soft] #lessons .lesson-package:nth-child(3) li,[data-design=soft] #lessons .lesson-package:nth-child(3) .package-price span{color:#493619}
@@ -191,6 +191,9 @@ body[data-design=studio]{background:#f3f4fa}
 @media(prefers-reduced-motion:reduce){.site-experience .reveal-ready{opacity:1;transform:none;transition:none}.site-experience .section img{transition:none}summary:after{transition:none}}
 
 [data-design=soft] .credentials>a,[data-design=studio] .credentials>a{padding-right:3.25rem}
+[data-design=soft] .credentials>a{transition:background .2s ease,box-shadow .2s ease}
+[data-design=soft] .credentials>a:is(:hover,:focus-visible){background:#d7c7ce}
+@media(prefers-reduced-motion:reduce){[data-design=soft] .credentials>a{transition:none}}
 @media(max-width:600px){
  .credentials>a{grid-template-columns:90px minmax(0,1fr);gap:12px}
  [data-design=soft] .credentials>a,[data-design=studio] .credentials>a{padding:18px 42px 18px 16px}
