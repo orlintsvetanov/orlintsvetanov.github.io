@@ -199,3 +199,20 @@ body[data-design=studio]{background:#f3f4fa}
  [data-design=soft] .credentials>a,[data-design=studio] .credentials>a{padding:18px 42px 18px 16px}
  .credentials>a::after{right:14px}
 }
+
+/* Darker text and panels for the selected music links. */
+[data-design=soft] #videos :is(#surbahar,#bingo,#dream-of-oz){transition:background-color .2s ease}
+[data-design=soft] #videos :is(#surbahar,#bingo,#dream-of-oz) :is(h3,p,a){transition:color .2s ease,border-color .2s ease}
+[data-design=soft] #videos :is(#surbahar,#bingo,#dream-of-oz):is(:hover,:focus-within){background:#e1d1c9}
+[data-design=soft] #videos :is(#surbahar,#bingo,#dream-of-oz):is(:hover,:focus-within) :is(h3,p,a){color:#1d1018;border-color:#1d1018}
+[data-design=soft] #videos .video-links>a:is(:hover,:focus-visible){background:#e1d1c9;color:#1d1018}
+[data-design=soft] #videos .video-links>a:is(:hover,:focus-visible) :is(strong,small,.play){color:#1d1018}
+[data-design=soft] #videos .video-links>a:is(:hover,:focus-visible) .play{border-color:#1d1018}
+@media(prefers-reduced-motion:reduce){
+ [data-design=soft] #videos :is(#surbahar,#bingo,#dream-of-oz),
+ [data-design=soft] #videos :is(#surbahar,#bingo,#dream-of-oz) :is(h3,p,a){transition:none}
+}
+
+/* Keep the full date range readable in the biography card. */
+.credentials .credential-range{font-size:1.6rem;letter-spacing:-.02em;white-space:nowrap}
+@media(max-width:600px){.credentials .credential-range{font-size:1.15rem}}

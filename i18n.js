@@ -1,4 +1,7 @@
 const english = {
+  "Канал в YouTube · нов раздел": "YouTube channel · new tab",
+  "Записвал съм цигулка за Лили Иванова, Веселин Маринов, Любо Киров, Мариана Попова и Красимир Гюлмезов, както и за проекти на Георги Стрезов, Живко Петров и триото JP3, Ангел Дюлгеров и Живко Василев.": "I have recorded violin for Lili Ivanova, Veselin Marinov, Lyubo Kirov, Mariana Popova and Krasimir Gyulmezov, as well as for projects by George Strezov, Zhivko Petrov and his trio JP3, Angel Dyulgerov and Zhivko Vasilev.",
+  "Сред записите ми е и албумът „Between the Worlds“ на JP3.": "One of these recordings is the JP3 album “Between the Worlds”.",
   "Слушайте в SoundCloud · нов раздел": "Listen on SoundCloud · new tab",
   "SoundCloud · нов раздел": "SoundCloud · new tab",
   "Онлайн уроци": "Online lessons",
