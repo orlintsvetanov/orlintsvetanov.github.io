@@ -1,6 +1,4 @@
 const english = {
-  "Слушайте в SoundCloud · нов раздел": "Listen on SoundCloud · new tab",
-  "SoundCloud · нов раздел": "SoundCloud · new tab",
   "Онлайн уроци": "Online lessons",
   "Участия": "Live events",
   "Орлин Цветанов | Цигулар за събития и онлайн уроци": "Orlin Tsvetanov | Violinist for events and online lessons",
