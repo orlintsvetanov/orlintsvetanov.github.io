@@ -396,7 +396,13 @@ const english = {
   "Запитване: ": "Enquiry: ",
   "Запитването е подготвено. Изпратете го от вашето имейл приложение.": "Your enquiry is ready. Send it from your email application.",
   "Запитването е копирано.": "Your enquiry has been copied.",
-  "Текстът е маркиран. Копирайте го от менюто на устройството.": "The text is selected. Copy it using your device menu."
+  "Текстът е маркиран. Копирайте го от менюто на устройството.": "The text is selected. Copy it using your device menu.",
+  "ЗАПИС": "RECORDING",
+  "„Малка токата“": "Little Toccata",
+  "Музика: Петър Христосков": "Music by Petar Hristoskov",
+  "Изпълнение: Ангел Димитров, Живко Василев и Орлин Цветанов": "Performed by Angel Dimitrov, Zhivko Vasilev and Orlin Tsvetanov",
+  "Запис: „Малка токата“": "Recording: Little Toccata",
+  "Изтеглете записа": "Download the recording"
 };
 let currentLanguage = 'bg';
 window.siteTranslate = text => currentLanguage === 'en' ? (english[text] ?? text) : text;
