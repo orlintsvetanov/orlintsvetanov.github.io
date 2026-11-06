@@ -120,19 +120,19 @@ def render(kind, lang, p):
 <link rel="alternate" hreflang="bg" href="{ORIGIN + alt_bg}"><link rel="alternate" hreflang="en" href="{ORIGIN + alt_en}"><link rel="alternate" hreflang="x-default" href="{ORIGIN + alt_bg}">
 <meta property="og:type" content="website"><meta property="og:title" content="{p["title"]}"><meta property="og:description" content="{p["description"]}"><meta property="og:url" content="{ORIGIN + p["path"]}"><meta property="og:image" content="{ORIGIN + p["image"]}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{p["title"]}"><meta name="twitter:description" content="{p["description"]}"><meta name="twitter:image" content="{ORIGIN + p["image"]}">
-<link rel="stylesheet" href="/fonts.css?v=63a2b125256a"><link rel="stylesheet" href="/service-pages.css?v=2">
+<link rel="stylesheet" href="/fonts.css?v=63a2b125256a"><link rel="stylesheet" href="/service-pages.css?v=3">
 <script type="application/ld+json">{json.dumps(service, ensure_ascii=False)}</script>
 </head>
 <body>
 <a class="skip" href="#main">{skip}</a>
 <header class="service-header"><div class="service-header-inner"><a class="brand" href="{p["home"]}">{home_title}</a>
 <nav class="service-nav" aria-label="{('Основна навигация' if bg else 'Main navigation')}"><a href="{p["home"]}">{nav[0]}</a><a href="{event_url}"{(' aria-current="page"' if kind == 'events' else '')}>{nav[1]}</a><a href="{lesson_url}"{(' aria-current="page"' if kind == 'lessons' else '')}>{nav[2]}</a><a href="{p["home"]}#contact">{nav[3]}</a><span class="language" aria-label="{lang_label}"><a href="{switch_bg}" lang="bg" hreflang="bg"{(' aria-current="page"' if bg else '')}>БГ</a><span aria-hidden="true">/</span><a href="{switch_en}" lang="en" hreflang="en"{(' aria-current="page"' if not bg else '')}>EN</a></span></nav></div></header>
-<main id="main"><div class="wrap"><section class="hero"><div><p class="eyebrow">{p["eyebrow"]}</p><h1>{p["h1"]}</h1><p class="hero-lead">{p["lead"]}</p><div class="actions"><a class="button" href="{p["primary_url"]}"{booking_attrs}>{p["primary"]}</a><a class="text-link" href="{p["secondary_url"]}">{p["secondary"]}</a></div></div><figure class="hero-figure"><img src="{p["image"]}" alt="{p["alt"]}" {'width="1280" height="852"' if kind == 'events' else 'width="854" height="1280"'}><figcaption>{p["credit"]}</figcaption></figure></section>
+<main id="main"><div class="wrap"><section class="hero"><div><p class="eyebrow">{p["eyebrow"]}</p><h1>{p["h1"]}</h1><p class="hero-lead">{p["lead"]}</p><div class="actions"><a class="button" href="{p["primary_url"]}"{booking_attrs}>{p["primary"]}</a><a class="text-link" href="{p["secondary_url"]}">{p["secondary"]}</a></div></div><figure class="hero-figure"><img src="{p["image"]}" alt="{p["alt"]}" {'width="1280" height="852"' if kind == 'events' else 'width="854" height="1280"'}></figure></section>
 <section class="section"><div class="section-intro"><p class="eyebrow">{p["section_eyebrow"]}</p><h2>{p["section_title"]}</h2><p>{p["section_intro"]}</p></div><div class="cards">{cards}</div></section>
 <section class="section"><div class="details-grid"><div><p class="eyebrow">{p["detail_eyebrow"]}</p><h2>{p["detail_title"]}</h2></div><div><p>{p["detail_a"]}</p><p>{p["detail_b"]}</p></div></div></section>
 <section class="section faq"><h2>{p["faq_title"]}</h2>{faq}</section></div>
 <section class="closing"><div class="wrap"><p class="eyebrow">{p["closing_eyebrow"]}</p><h2>{p["closing_title"]}</h2><p>{p["closing_text"]}</p><div class="actions"><a class="button" href="{p["primary_url"]}"{booking_attrs}>{p["primary"]}</a>{closing_secondary}</div></div></section></main>
-<footer class="service-footer"><div class="wrap"><span>{home_title} · {footer_city}</span><a href="{p["home"]}">{nav[0]}</a></div></footer>
+<footer class="service-footer"><div class="wrap"><span>{home_title} · {footer_city}</span><a href="{p["home"]}">{nav[0]}</a><span class="photo-credit">{('Фотографи: Ина Янева и Станислав Димитров' if bg else 'Photographers: Ina Yaneva and Stanislav Dimitrov')}</span></div></footer>
 </body></html>'''
 
 

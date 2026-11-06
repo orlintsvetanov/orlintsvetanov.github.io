@@ -84,3 +84,6 @@ body[data-demo-page="lessons-packages"] #lesson-packages{margin-top:clamp(24px,3
 @keyframes photo-close-glow{0%,5%,23%,100%{text-shadow:none;box-shadow:none}13%{text-shadow:0 0 8px #ffffffcc;box-shadow:0 0 10px #ffffff55}}
 @keyframes photo-close-sheen{0%,5%{transform:translateX(-160%) skewX(-20deg);opacity:0}8%{opacity:.7}18%{opacity:.5}23%,100%{transform:translateX(350%) skewX(-20deg);opacity:0}}
 @media(prefers-reduced-motion:reduce){.photo-dialog .close-photo,.photo-dialog .close-photo::after{animation:none!important}}
+
+/* A quiet, readable thank-you for photographers in the footer. */
+.footer-base .photo-credit{font-size:.75rem;line-height:1.6;color:#dfd2d7}
