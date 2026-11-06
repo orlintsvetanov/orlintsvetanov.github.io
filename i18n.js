@@ -164,7 +164,7 @@ const english = {
   "/ участие": "/ performance",
   "При регулярни ангажименти условията се договарят индивидуално.": "Terms for regular engagements are agreed individually.",
   "Обсъдете сътрудничество": "Discuss a collaboration",
-  "Хонорарите са нетни и без ДДС, за 60 минути музика. Начинът на договаряне и общата сума за възложителя се уточняват в индивидуалната оферта.": "The fees are net and exclude VAT for 60 minutes of music. Contractual arrangements and the total cost to the client are specified in an individual offer.",
+  "Уточнените хонорари са нетни и без ДДС за 60 минути музика.": "The agreed fees are net and exclude VAT for 60 minutes of music.",
   "Техническа подготовка и организация": "Technical preparation and organisation",
   "От мен": "What I provide",
   "Осигурявам сценично облекло, акустична или електрическа цигулка и предварително подготвен репертоар. Използвам компютър с предварително миксирани инструментални тракове (подложки) и малък миксер. Към озвучителната система подавам стерео сигнал - ляв и десен канал - чрез два кабела.": "I provide stage attire, an acoustic or electric violin and a prepared repertoire. I use a computer with pre-mixed instrumental backing tracks and a small mixer. I send a stereo signal, left and right channels, to the sound system through two cables.",
