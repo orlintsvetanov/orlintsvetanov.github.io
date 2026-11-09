@@ -30,3 +30,4 @@ GitHub ограничава употребата на Pages за онлайн б
 - https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 - https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages
 - https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https
+<!-- Request GitHub Pages rebuild: 2026-11-09 -->
