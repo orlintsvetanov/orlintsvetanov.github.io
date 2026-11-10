@@ -56,3 +56,24 @@ figure{margin:0}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 .service-footer .photo-credit{flex-basis:100%;font-size:.75rem;line-height:1.6;color:#dfd2d7}
+
+/* Footer credits on the detailed service and ensemble pages. */
+.service-footer .photo-credit,.service-footer .footer-place{font-size:1rem;line-height:1.65;color:#ece1e7}
+.service-footer .credit-person{font-weight:600;white-space:nowrap}
+.service-footer a.credit-person{text-decoration:none;text-underline-offset:4px}
+.service-footer .credit-group{white-space:nowrap}
+.service-footer a.credit-person:focus-visible{outline:2px solid #f2d8a1;outline-offset:4px;border-radius:2px}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+ .service-footer .footer-accent{background-image:linear-gradient(110deg,#e9dde2 0%,#e9dde2 39%,#fff6e0 50%,#e9dde2 61%,#e9dde2 100%);background-size:260% 100%;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:service-footer-light 12s ease-in-out infinite}
+ @keyframes service-footer-light{0%,18%{background-position:100% 0}48%,100%{background-position:0 0}}
+ @media (prefers-reduced-motion:reduce){.service-footer .footer-accent{animation:none;background-image:none;-webkit-text-fill-color:currentColor}}
+}
+
+.service-footer .wrap>a:is(:hover,:focus-visible){color:#f3cc82;text-decoration:underline;text-decoration-color:#f3cc82;text-decoration-thickness:1px;text-underline-offset:7px}
+.service-footer a.credit-person:is(:hover,:focus-visible){color:#f3cc82;-webkit-text-fill-color:currentColor;background-image:none;animation:none;text-decoration:underline;text-decoration-color:currentColor}
+
+/* The chosen language remains white; the other highlights on interaction. */
+.service-nav .language a{color:#bcb5b8;text-decoration:none;border-bottom:1px solid transparent}
+.service-nav .language a[aria-current="page"]{color:#fffdfa;border-bottom-color:#fffdfa}
+.service-nav .language a:not([aria-current="page"]):is(:hover,:focus-visible){color:#f3cc82;border-bottom-color:#f3cc82}
+.service-nav .language a:focus-visible{outline:2px solid #f3cc82;outline-offset:3px}

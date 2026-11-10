@@ -87,3 +87,74 @@ body[data-demo-page="lessons-packages"] #lesson-packages{margin-top:clamp(24px,3
 
 /* A quiet, readable thank-you for photographers in the footer. */
 .footer-base .photo-credit{font-size:.75rem;line-height:1.6;color:#dfd2d7}
+
+/* Current section: a steady line and a subtle occasional sweep across the label. */
+@media(min-width:701px){
+ body[data-demo-page] #site-nav>a:not(.button)[aria-current]::after,
+ body[data-demo-page] #site-nav .demo-project-main[aria-current]::after{transform:scaleX(1);background:#fffdfa}
+ body[data-demo-page] #site-nav>a:not(.button)[aria-current],
+ body[data-demo-page] #site-nav .demo-project-main[aria-current]{color:#fffdfa}
+}
+@media(max-width:700px){
+ body[data-demo-page] #site-nav>a[aria-current]:not(.button),
+ body[data-demo-page] #site-nav .demo-project-main[aria-current]{color:#fffdfa;text-decoration:underline;text-decoration-color:#fffdfa;text-underline-offset:7px;text-decoration-thickness:1px}
+}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+ @media(prefers-reduced-motion:no-preference){
+  body[data-demo-page] #site-nav>a:not(.button)[aria-current]:not(:hover):not(:focus-visible),
+  body[data-demo-page] #site-nav .demo-project-main[aria-current]:not(:hover):not(:focus-visible){background-image:linear-gradient(110deg,#f4e8df 35%,#fff 48%,#e9c98d 51%,#f4e8df 62%);background-size:250% 100%;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:current-page-glint 9s ease-in-out infinite}
+ }
+}
+@keyframes current-page-glint{0%,20%{background-position:140% 0}45%,100%{background-position:-40% 0}}
+body[data-demo-page] #site-nav>a[data-demo-contact][aria-current],
+body[data-demo-page] .header-contact-compact[aria-current]{border-color:#fffdfa;box-shadow:0 0 0 1px #fffdfa55}
+body[data-demo-page="studio"] #studio>.studio-image{align-self:start}
+.official-artist-link,.bio-official-link{display:inline-flex;align-items:center;min-height:44px;margin-top:14px;padding:10px 16px;border:1px solid #947b89;border-radius:24px;color:#51384c;font-weight:600;text-decoration:none}
+.official-artist-link:is(:hover,:focus-visible),.bio-official-link:is(:hover,:focus-visible){background:#e6d6dc;color:#382831}
+.press-section{background:#f7f4ee;color:#2d2428;padding-top:clamp(56px,7vw,90px);padding-bottom:clamp(56px,7vw,90px)}
+.press-section h2{margin:10px 0 15px;font-size:clamp(2.5rem,4vw,4rem)}
+.press-section>p:not(.eyebrow){color:#685d65;max-width:650px}
+.press-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:30px}
+.press-card{display:flex;flex-direction:column;gap:10px;min-height:175px;padding:25px 27px;border:1px solid #e0d4d6;border-radius:20px;background:#fffaf6;color:#382831;text-decoration:none;transition:background .2s,transform .2s,border-color .2s}
+.press-card-feature{grid-column:1 / -1}
+.press-card strong{font:500 clamp(1.35rem,2vw,1.75rem)/1.2 var(--display)}
+.press-card span{font-size:.86rem;line-height:1.5;color:#675762}
+.press-card .press-source{font:600 .7rem/1.4 var(--label);letter-spacing:.12em;color:#7c586a}
+.press-card:is(:hover,:focus-visible){background:#eadce1;border-color:#b99aa9;transform:translateY(-2px)}
+@media(max-width:700px){.press-grid{grid-template-columns:1fr}.press-card{min-height:0}}
+@media(prefers-reduced-motion:reduce){.press-card{transition:none}.press-card:is(:hover,:focus-visible){transform:none}}
+
+/* Keep every footer link intact and let complete links wrap together. */
+footer.dark{grid-template-columns:minmax(0,1fr);row-gap:12px}
+footer.dark>.footer-home{justify-self:start;align-self:start;font-size:clamp(1.6rem,2.2vw,2rem)}
+footer.dark>nav{display:flex;flex-wrap:wrap;align-items:center;column-gap:clamp(20px,2.5vw,36px);row-gap:0;min-width:0}
+footer.dark>nav a{flex:0 0 auto;white-space:nowrap;font-size:.95rem;text-decoration:none}
+footer.dark>.footer-base{grid-column:auto;margin-top:16px;align-items:baseline;line-height:1.6}
+footer.dark .footer-base .footer-place,footer.dark .footer-base .photo-credit{font-size:1rem;line-height:1.65;color:#ece1e7}
+footer.dark .photo-credit, .service-footer .photo-credit{letter-spacing:.01em}
+.footer-base .credit-person,.service-footer .credit-person{font-weight:600;white-space:nowrap}
+.footer-base a.credit-person,.service-footer a.credit-person{text-decoration:none;text-underline-offset:4px}
+.footer-base .credit-group,.service-footer .credit-group{white-space:nowrap}
+.footer-base a.credit-person:focus-visible,.service-footer a.credit-person:focus-visible{outline:2px solid #f2d8a1;outline-offset:4px;border-radius:2px}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  footer.dark .footer-accent{background-image:linear-gradient(110deg,#e9dde2 0%,#e9dde2 39%,#fff6e0 50%,#e9dde2 61%,#e9dde2 100%);background-size:260% 100%;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:footer-light 12s ease-in-out infinite}
+  footer.dark .credit-person:nth-child(3){animation-delay:1s}
+  @keyframes footer-light{0%,18%{background-position:100% 0}48%,100%{background-position:0 0}}
+  @media (prefers-reduced-motion:reduce){footer.dark .footer-accent{animation:none;background-image:none;-webkit-text-fill-color:currentColor}}
+}
+@media(max-width:600px){footer.dark>nav{column-gap:22px}footer.dark>.footer-base{align-items:flex-start;margin-top:10px}}
+
+/* Footer navigation and photo credits follow the main menu on hover. */
+footer.dark>.footer-home{text-decoration:none}
+footer.dark>nav a:is(:hover,:focus-visible),footer.dark>.footer-home:is(:hover,:focus-visible){color:#f3cc82;text-decoration:underline;text-decoration-color:#f3cc82;text-decoration-thickness:1px;text-underline-offset:7px}
+footer.dark .footer-base a.credit-person:is(:hover,:focus-visible){color:#f3cc82;-webkit-text-fill-color:currentColor;background-image:none;animation:none;text-decoration:underline;text-decoration-color:currentColor}
+
+/* Match language controls to the current and hovered menu states. */
+.language-switch button[aria-pressed="true"]{color:#fffdfa}
+.language-switch button[aria-pressed="true"]::after{background:#fffdfa}
+.language-switch button[aria-pressed="false"]:is(:hover,:focus-visible){color:#f3cc82}
+.language-switch button[aria-pressed="false"]:is(:hover,:focus-visible)::after{content:"";position:absolute;left:5px;right:5px;bottom:6px;height:1px;background:#f3cc82;pointer-events:none}
+
+/* Keep the added concert photograph whole and give it room to breathe. */
+body[data-demo-page="lili"] .demo-gallery .lili-concert-wide{grid-column:1 / -1;width:min(100%,900px);justify-self:center}
+body[data-demo-page="lili"] .demo-gallery .lili-concert-wide img{height:auto;max-height:none;object-fit:contain}
