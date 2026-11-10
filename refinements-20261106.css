@@ -158,3 +158,9 @@ footer.dark .footer-base a.credit-person:is(:hover,:focus-visible){color:#f3cc82
 /* Keep the added concert photograph whole and give it room to breathe. */
 body[data-demo-page="lili"] .demo-gallery .lili-concert-wide{grid-column:1 / -1;width:min(100%,900px);justify-self:center}
 body[data-demo-page="lili"] .demo-gallery .lili-concert-wide img{height:auto;max-height:none;object-fit:contain}
+
+/* Hide scrolling home content behind the full mobile identity, from the first pixel. */
+@media(max-width:700px){
+ body[data-demo-page="home"] .site-header,
+ body[data-demo-page="home"] .site-header.is-scrolled{background:#080809;border-bottom:0}
+}
