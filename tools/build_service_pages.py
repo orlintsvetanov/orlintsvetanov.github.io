@@ -120,7 +120,7 @@ def render(kind, lang, p):
 <link rel="alternate" hreflang="bg" href="{ORIGIN + alt_bg}"><link rel="alternate" hreflang="en" href="{ORIGIN + alt_en}"><link rel="alternate" hreflang="x-default" href="{ORIGIN + alt_bg}">
 <meta property="og:type" content="website"><meta property="og:title" content="{p["title"]}"><meta property="og:description" content="{p["description"]}"><meta property="og:url" content="{ORIGIN + p["path"]}"><meta property="og:image" content="{ORIGIN + p["image"]}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{p["title"]}"><meta name="twitter:description" content="{p["description"]}"><meta name="twitter:image" content="{ORIGIN + p["image"]}">
-<link rel="stylesheet" href="/fonts.css?v=63a2b125256a"><link rel="stylesheet" href="/service-pages.css?v=3">
+<link rel="stylesheet" href="/fonts.css?v=63a2b125256a"><link rel="stylesheet" href="/service-pages.css?v=8">
 <script type="application/ld+json">{json.dumps(service, ensure_ascii=False)}</script>
 </head>
 <body>

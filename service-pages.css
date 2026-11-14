@@ -77,3 +77,23 @@ figure{margin:0}
 .service-nav .language a[aria-current="page"]{color:#fffdfa;border-bottom-color:#fffdfa}
 .service-nav .language a:not([aria-current="page"]):is(:hover,:focus-visible){color:#f3cc82;border-bottom-color:#f3cc82}
 .service-nav .language a:focus-visible{outline:2px solid #f3cc82;outline-offset:3px}
+
+/* Match the type scale of the main pages. */
+:root{--display:'Prata',Georgia,serif}
+main h1{font-size:clamp(1.4rem,3.7vw,2.45rem);line-height:1.18;font-weight:400}
+main h2{font-size:clamp(1.3rem,3.2vw,2rem);line-height:1.2;font-weight:400}
+main h3,main .sources .card h3{font-size:clamp(1.15rem,2.2vw,1.7rem);line-height:1.24;font-weight:400}
+main p:not(.eyebrow){line-height:1.55}
+main .hero-lead{margin-top:20px}
+@media(max-width:700px){
+ main h1{font-size:clamp(1.4rem,6.2vw,2rem)}
+ main h2{font-size:clamp(1.25rem,5.3vw,1.75rem)}
+ main h3,main .sources .card h3{font-size:clamp(1.1rem,4.5vw,1.5rem)}
+}
+
+/* Keep the artist's name ahead of the page title on a phone. */
+@media(max-width:700px){
+ .service-header .brand{font-size:clamp(1.3rem,5.5vw,1.55rem)}
+ main h1{font-size:clamp(1.2rem,5.28vw,1.48rem)}
+ main h2{font-size:clamp(1.12rem,4.8vw,1.35rem)}
+}
